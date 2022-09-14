@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {Sum, Subtract } = require('../logic/calcuLogic');
+const {Sum, Subtract , Divide, Multiplication} = require('../logic/calcuLogic');
 const joi = require('joi')
 const validator = require('express-joi-validation').createValidator({})
 
@@ -14,8 +14,9 @@ router.post('/', validator.body(querySchema), async (req,res)=>{
     const number2 = req.body.number2;
     let resultSum = Sum(number1,number2);
     let resultSub = Subtract(number1,number2);
-    
-    res.send({sum: resultSum, subtract: resultSub})
+    let resultDivide = Divide(number1,number2);
+    let resultMulti = Multiplication(number1,number2);
+    res.send({sum: resultSum, subtract: resultSub, Division: resultDivide, Multiplication: resultMulti})
 })
 
 module.exports = router;
