@@ -1,5 +1,6 @@
 
 # EMU Coding Challenge
+- you have json with 2 numbers (number1, number2). your task is to add, substract, divide and multiply of the 2 numbers and return them into a json.
 
 ## pre-requiste
 - npm
