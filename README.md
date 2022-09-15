@@ -2,17 +2,18 @@
 # EMU Coding Challenge
 - you have json with 2 numbers (number1, number2). your task is to add, substract, divide and multiply of the 2 numbers and return them into a json.
 
-## pre-requiste
+## pre-requisite
 - npm
-- express
 
 ## To run test locally:
+- npm init --yes
+- install following packages [body-parser , dotenv , express , express-joi-validation , joi] BY npm install <package-name>
 - `cp .env-example .env`
 - run `node app.js` in your terminal
 - open postman
-- browse http://localhost:[your_port]/api/calculation
+- browse <http://localhost:8080/api/calculation>
 - test with json data that contains 2 numbers 
 {
-    "number1": "100000000000",
-    "number2": "-100000000000"
+    "number1": 100000000000,
+    "number2": -100000000000
 }
